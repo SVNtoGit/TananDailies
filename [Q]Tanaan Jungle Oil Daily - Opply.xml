@@ -54,6 +54,10 @@
 	<If Condition="HasQuest(38440)" >
 		<If Condition="!IsQuestCompleted(38440)" >
 			<CustomBehavior File="RunCode" Code="Logging.Write(System.Windows.Media.Colors.DeepSkyBlue, &quot;[Profile]: Moving to The Fel Forge.&quot;);"/>
+			
+			<If Condition="Unit(90960, o =&gt; o.Distance &lt; 100 ) != null">
+				<CustomBehavior File="TaxiRide" MobId="90960" WaitForNpcs="false" DestName="Malo's Lookout, Tanaan Jungle"  WaitTime="1000" />
+			</If>
 		</If>
 		
 		<SetGrindArea>
@@ -89,6 +93,10 @@
 	<If Condition="HasQuest(38250)" >
 		<If Condition="!IsQuestCompleted(38250)" >
 			<CustomBehavior File="RunCode" Code="Logging.Write(System.Windows.Media.Colors.DeepSkyBlue, &quot;[Profile]: Moving to Kra'nak.&quot;);"/>
+			
+			<If Condition="Unit(90960, o =&gt; o.Distance &lt; 100 ) != null">
+				<CustomBehavior File="TaxiRide" MobId="90960" WaitForNpcs="false" DestName="Aktar's Post, Tanaan Jungle"  WaitTime="1000" />
+			</If>
 		</If>
 		<CustomBehavior File="UserSettings" KillBetweenHotspots="true" />
 
@@ -131,6 +139,10 @@
 	<If Condition="HasQuest(38045)" >
 		<If Condition="!IsQuestCompleted(38045)" >
 			<CustomBehavior File="RunCode" Code="Logging.Write(System.Windows.Media.Colors.DeepSkyBlue, &quot;[Profile]: Moving to Zeth'gol.&quot;);"/>
+			
+			<If Condition="Unit(90960, o =&gt; o.Distance &lt; 100 ) != null">
+				<CustomBehavior File="TaxiRide" MobId="90960" WaitForNpcs="false" DestName="Sha'naari Refuge, Tanaan Jungle"  WaitTime="1000" />
+			</If>
 		</If>	
 		<CustomBehavior File="UserSettings" KillBetweenHotspots="true" />
 		
@@ -166,6 +178,10 @@
 	<If Condition="HasQuest(37968)" >
 		<If Condition="!IsQuestCompleted(37968)" >
 			<CustomBehavior File="RunCode" Code="Logging.Write(System.Windows.Media.Colors.DeepSkyBlue, &quot;[Profile]: Moving to Temple of Sha'naar.&quot;);"/>
+			
+			<If Condition="Unit(90960, o =&gt; o.Distance &lt; 100 ) != null">
+				<CustomBehavior File="TaxiRide" MobId="90960" WaitForNpcs="false" DestName="Sha'naari Refuge, Tanaan Jungle"  WaitTime="1000" />
+			</If>
 		</If>
 		<CustomBehavior File="UserSettings" KillBetweenHotspots="true" />
 		
@@ -189,6 +205,10 @@
 	<If Condition="HasQuest(37891)" >
 		<If Condition="!IsQuestCompleted(38440)" >
 			<CustomBehavior File="RunCode" Code="Logging.Write(System.Windows.Media.Colors.DeepSkyBlue, &quot;[Profile]: Moving to Ironhold Harbor.&quot;);"/>
+			
+			<If Condition="Unit(90960, o =&gt; o.Distance &lt; 100 ) != null">
+				<CustomBehavior File="TaxiRide" MobId="90960" WaitForNpcs="false" DestName="Malo's Lookout, Tanaan Jungle"  WaitTime="1000" />
+			</If>
 		</If>
 		<CustomBehavior File="UserSettings" KillBetweenHotspots="true" />
 		
@@ -233,6 +253,10 @@
 	<If Condition="HasQuest(38046)" >
 		<If Condition="!IsQuestCompleted(38046)" >
 			<CustomBehavior File="RunCode" Code="Logging.Write(System.Windows.Media.Colors.DeepSkyBlue, &quot;[Profile]: Moving to The Iron Front.&quot;);"/>
+			
+			<If Condition="Unit(90960, o =&gt; o.Distance &lt; 100 ) != null">
+				<CustomBehavior File="TaxiRide" MobId="90960" WaitForNpcs="false" DestName="The Iron Front, Tanaan Jungle"  WaitTime="1000" />
+			</If>
 		</If>
 		<CustomBehavior File="UserSettings" KillBetweenHotspots="true" />
 		
