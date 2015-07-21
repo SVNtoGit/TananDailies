@@ -40,6 +40,14 @@
 		
 		<CustomBehavior File="InteractWith" MobId="239902" NonCompeteDistance="0" WaitTime="2000" Range="5" X="3817.707" Y="-1363.149" Z="95.86454" />
 		<CustomBehavior File="Misc\RunLua" Lua="QuestChoiceFrameOption1.OptionButton:Click()" WaitTime="500" />
+		
+		<If Condition="HasQuest(38250)">
+			<!-- One quest from Dawn-Seeker Krisek -->
+			<CustomBehavior File="InteractWith"  MobId="95424" WaitTime="500" X="3855.705" Y="-1335.908" Z="91.15343" />
+			<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(1)" />
+			<CustomBehavior File="WaitTimer" WaitTime="1500" />
+			<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()"  />
+		</If>
 	</If>
 	
 	<!-- The Fel Forge -->
@@ -82,28 +90,40 @@
 		<If Condition="!IsQuestCompleted(38250)" >
 			<CustomBehavior File="RunCode" Code="Logging.Write(System.Windows.Media.Colors.DeepSkyBlue, &quot;[Profile]: Moving to Kra'nak.&quot;);"/>
 		</If>
-
 		<CustomBehavior File="UserSettings" KillBetweenHotspots="true" />
 
 		<CustomBehavior File="InteractWith" MobIds="90795, 90300, 90706, 90790, 90791, 90796, 90792, 243852" NumOfTimes="100" WaitTime="1500" TerminateWhen="IsQuestCompleted(38250)" >
 			<HuntingGrounds WaypointVisitStrategy="Random" >
-				<Hotspot X="4547.013" Y="449.2588" Z="229.8684" />
-				<Hotspot X="4555.957" Y="536.5192" Z="229.2842" />
-				<Hotspot X="4640.212" Y="578.2678" Z="201.7227" />
-				<Hotspot X="4666.338" Y="619.4261" Z="204.9169" />
-				<Hotspot X="4592.031" Y="621.0432" Z="201.358" />
-				<Hotspot X="4519.438" Y="654.9599" Z="175.5802" />
-				<Hotspot X="4476.47" Y="785.5797" Z="181.1243" />
-				<Hotspot X="4396.728" Y="814.7548" Z="174.9204" />
-				<Hotspot X="4483.399" Y="594.6462" Z="209.2016" />
-				<Hotspot X="4537.519" Y="517.9146" Z="229.2548" />
+				<Hotspot X="4546.808" Y="486.0171" Z="226.6106" />
+				<Hotspot X="4639.002" Y="608.1016" Z="204.4243" />
+				<Hotspot X="4523.261" Y="653.3411" Z="175.3183" />
+				<Hotspot X="4409.374" Y="820.7141" Z="175.4831" />
 			</HuntingGrounds>
 		</CustomBehavior>
+		
+		<If Condition="HasQuest(39433)" >
+			<CustomBehavior File="RunCode" Code="Logging.Write(System.Windows.Media.Colors.DeepSkyBlue, &quot;[Profile]: Finnishing up Unseen Influence while we are here.&quot;);"/>
+			<CustomBehavior File="UserSettings" KillBetweenHotspots="false" />
+
+			<CustomBehavior File="InteractWith" MobIds="243852" NumOfTimes="100" WaitTime="1500" TerminateWhen="IsQuestCompleted(39433)" >
+				<HuntingGrounds WaypointVisitStrategy="Random" >
+					<Hotspot X="4546.808" Y="486.0171" Z="226.6106" />
+					<Hotspot X="4639.002" Y="608.1016" Z="204.4243" />
+					<Hotspot X="4523.261" Y="653.3411" Z="175.3183" />
+					<Hotspot X="4409.374" Y="820.7141" Z="175.4831" />
+				</HuntingGrounds>
+			</CustomBehavior>
+		</If>
 		
 		<CustomBehavior File="UserSettings" Preset="UserOriginal" />
 		
 		<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(&quot;item:6948&quot;)" WaitTime="15000" />
 		<TurnIn QuestName="Assault on the Ruins of Kra'nak" QuestId="38250" TurnInName="Exarch Yrel" TurnInId="90309" />
+		
+		<!-- Unseen Influence -->
+		<If Condition="HasQuest(39433) &amp;&amp; IsQuestCompleted(39433)" >
+			<TurnIn Nav="Fly" QuestName="Unseen Influence" QuestId="39433" TurnInName="Dawn-Seeker Krisek" TurnInId="95424" X="3855.705" Y="-1335.908" Z="91.15343" />
+		</If>
 	</If>
 	
 	
@@ -112,7 +132,6 @@
 		<If Condition="!IsQuestCompleted(38045)" >
 			<CustomBehavior File="RunCode" Code="Logging.Write(System.Windows.Media.Colors.DeepSkyBlue, &quot;[Profile]: Moving to Zeth'gol.&quot;);"/>
 		</If>	
-		
 		<CustomBehavior File="UserSettings" KillBetweenHotspots="true" />
 		
 		<CustomBehavior File="InteractWith" MobId="90704" NumOfTimes="100" WaitTime="1500" TerminateWhen="IsQuestCompleted(38045)" >
@@ -148,7 +167,6 @@
 		<If Condition="!IsQuestCompleted(37968)" >
 			<CustomBehavior File="RunCode" Code="Logging.Write(System.Windows.Media.Colors.DeepSkyBlue, &quot;[Profile]: Moving to Temple of Sha'naar.&quot;);"/>
 		</If>
-
 		<CustomBehavior File="UserSettings" KillBetweenHotspots="true" />
 		
 		<CustomBehavior File="InteractWith" MobIds="90501, 90302, 90687, 240165" NumOfTimes="100" WaitTime="1500" TerminateWhen="IsQuestCompleted(37968)" >
@@ -172,6 +190,7 @@
 		<If Condition="!IsQuestCompleted(38440)" >
 			<CustomBehavior File="RunCode" Code="Logging.Write(System.Windows.Media.Colors.DeepSkyBlue, &quot;[Profile]: Moving to Ironhold Harbor.&quot;);"/>
 		</If>
+		<CustomBehavior File="UserSettings" KillBetweenHotspots="true" />
 		
 		<CustomBehavior File="Hooks\DoWhen" ActivityName="InteractWithObjects" 
 		                UseWhen="!Me.Combat &amp;&amp; (Unit(90433, o =&gt; o.Distance &lt; 30) != null || Object(240014, o =&gt; o.Distance &lt; 30) != null)" >
@@ -204,6 +223,8 @@
 		
 		<CustomBehavior File="Hooks\DoWhen" ActivityName="InteractWithObjects" Command="Remove" />
 		
+		<CustomBehavior File="UserSettings" Preset="UserOriginal" />
+		
 		<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(&quot;item:6948&quot;)" WaitTime="15000" />
 		<TurnIn Nav="Fly" QuestName="Assault on Ironhold Harbor" QuestId="37891" TurnInName="Exarch Yrel" TurnInId="90309" />
 	</If>
@@ -213,6 +234,7 @@
 		<If Condition="!IsQuestCompleted(38046)" >
 			<CustomBehavior File="RunCode" Code="Logging.Write(System.Windows.Media.Colors.DeepSkyBlue, &quot;[Profile]: Moving to The Iron Front.&quot;);"/>
 		</If>
+		<CustomBehavior File="UserSettings" KillBetweenHotspots="true" />
 		
 		<!-- if not in combat, and first aid bandages is less or equal 2 and medical supplies within 30 yard range, pick up medical supplies -->
 	<CustomBehavior File="Hooks\DoWhen" ActivityName="PickUpBandage" 
@@ -250,6 +272,8 @@
 		
 		<CustomBehavior File="Hooks\DoWhen" ActivityName="PickUpBandage" Command="Remove" />
 		<CustomBehavior File="Hooks\DoWhen" ActivityName="InteractWithObject" Command="Remove" />
+		
+		<CustomBehavior File="UserSettings" Preset="UserOriginal" />
 		
 		<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(&quot;item:6948&quot;)" WaitTime="15000" />
 		<TurnIn QuestName="Battle At The Iron Front" QuestId="38046" TurnInName="Exarch Yrel" TurnInId="90309" />
