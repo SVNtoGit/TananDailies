@@ -65,6 +65,9 @@
 	<!-- Demonslayer of Tanaan -->
 	<If Condition="HasQuest(39581)" >
 		<CustomBehavior File="RunCode" Code="Logging.Write(System.Windows.Media.Colors.DeepSkyBlue, &quot;[Profile]: Doing Demonslayer of Tanaan.&quot;);"/>
+		
+		<CustomBehavior File="UserSettings" KillBetweenHotspots="false" />
+		
 		<SetGrindArea>
 			<GrindArea>
 				<TargetMinLevel>90</TargetMinLevel>
@@ -76,21 +79,17 @@
 				<MobIds>93024</MobIds>
 				<Factions></Factions>
 				<Hotspots>
-					<Hotspot X="4318.597" Y="-1149.225" Z="25.5256" />
-					<Hotspot X="4408.867" Y="-1184.457" Z="28.1635" />
-					<Hotspot X="4481.844" Y="-1193.374" Z="30.27559" />
-					<Hotspot X="4668.87" Y="-1195.876" Z="58.59499" />
-					<Hotspot X="4714.915" Y="-1161.29" Z="72.31329" />
-					<Hotspot X="4716.915" Y="-1316.507" Z="49.80239" />
-					<Hotspot X="4638.265" Y="-1205.439" Z="54.95919" />
-					<Hotspot X="4494.636" Y="-1192.648" Z="30.41391" />
-					<Hotspot X="4403.99" Y="-1169.877" Z="29.75685" />
-					<Hotspot X="4363.45" Y="-1104.806" Z="23.36624" />
-					<Hotspot X="4315.547" Y="-1139.718" Z="24.52512" />
+					<Hotspot X="4325.084" Y="-1171.347" Z="26.00255" />
+					<Hotspot X="4398.52" Y="-1118.235" Z="25.16836" />
+					<Hotspot X="4485.704" Y="-1187.429" Z="29.54398" />
+					<Hotspot X="4718.439" Y="-1171.345" Z="70.50551" />
+					<Hotspot X="4712.101" Y="-1287.346" Z="48.69128" />
 				</Hotspots>
 			</GrindArea>    
 		</SetGrindArea>
 		<GrindUntil Nav="Fly" Condition="IsQuestCompleted(39581)" />
+		
+		<CustomBehavior File="UserSettings" Preset="UserOriginal" />
 	</If>
 	
 	<!-- Tooth and Claw -->
@@ -330,6 +329,16 @@
 	
 	<!-- Unseen Influence -->
 	<If Condition="HasQuest(39433)" >
+	
+		<!-- If we got other quests in this area, kill everything -->
+		<If Condition="HasQuest(39570) || HasQuest(38250)" >
+			<CustomBehavior File="UserSettings" KillBetweenHotspots="true" />
+		</If>
+		<!-- If not, try to skip -->
+		<If Condition="!HasQuest(39570) &amp;&amp; !HasQuest(38250)" >
+			<CustomBehavior File="UserSettings" KillBetweenHotspots="false" />
+		</If>
+	
 		<CustomBehavior File="RunCode" Code="Logging.Write(System.Windows.Media.Colors.DeepSkyBlue, &quot;[Profile]: Doing Unseen Influence.&quot;);"/>
 		<While Condition="!IsQuestCompleted(39433)">
 			<CustomBehavior File="InteractWith" MobId="243852" Range="8" WaitTime="100" >
@@ -347,6 +356,8 @@
 				</HuntingGrounds>
 			</CustomBehavior>
 		</While>
+		
+		<CustomBehavior File="UserSettings" Preset="UserOriginal" />
 	</If>
 	
 	<!-- Secrets of the Shadow Council -->

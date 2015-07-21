@@ -83,22 +83,24 @@
 			<CustomBehavior File="RunCode" Code="Logging.Write(System.Windows.Media.Colors.DeepSkyBlue, &quot;[Profile]: Moving to Kra'nak.&quot;);"/>
 		</If>
 
-		<While Condition="!IsQuestCompleted(38250)">
-			<CustomBehavior File="InteractWith" MobIds="90795, 90300, 90706, 90790, 90791, 90796, 243852" Range="4" WaitTime="1500" TerminateWhen="IsQuestCompleted(38250)" >
-				<HuntingGrounds WaypointVisitStrategy="Random" >
-					<Hotspot X="4547.013" Y="449.2588" Z="229.8684" />
-					<Hotspot X="4555.957" Y="536.5192" Z="229.2842" />
-					<Hotspot X="4640.212" Y="578.2678" Z="201.7227" />
-					<Hotspot X="4666.338" Y="619.4261" Z="204.9169" />
-					<Hotspot X="4592.031" Y="621.0432" Z="201.358" />
-					<Hotspot X="4519.438" Y="654.9599" Z="175.5802" />
-					<Hotspot X="4476.47" Y="785.5797" Z="181.1243" />
-					<Hotspot X="4396.728" Y="814.7548" Z="174.9204" />
-					<Hotspot X="4483.399" Y="594.6462" Z="209.2016" />
-					<Hotspot X="4537.519" Y="517.9146" Z="229.2548" />
-				</HuntingGrounds>
-			</CustomBehavior>
-		</While>
+		<CustomBehavior File="UserSettings" KillBetweenHotspots="true" />
+		
+		<CustomBehavior File="InteractWith" MobIds="90795, 90300, 90706, 90790, 90791, 90796, 243852" NumOfTimes="100" WaitTime="1500" TerminateWhen="IsQuestCompleted(38250)" >
+			<HuntingGrounds WaypointVisitStrategy="Random" >
+				<Hotspot X="4547.013" Y="449.2588" Z="229.8684" />
+				<Hotspot X="4555.957" Y="536.5192" Z="229.2842" />
+				<Hotspot X="4640.212" Y="578.2678" Z="201.7227" />
+				<Hotspot X="4666.338" Y="619.4261" Z="204.9169" />
+				<Hotspot X="4592.031" Y="621.0432" Z="201.358" />
+				<Hotspot X="4519.438" Y="654.9599" Z="175.5802" />
+				<Hotspot X="4476.47" Y="785.5797" Z="181.1243" />
+				<Hotspot X="4396.728" Y="814.7548" Z="174.9204" />
+				<Hotspot X="4483.399" Y="594.6462" Z="209.2016" />
+				<Hotspot X="4537.519" Y="517.9146" Z="229.2548" />
+			</HuntingGrounds>
+		</CustomBehavior>
+		
+		<CustomBehavior File="UserSettings" Preset="UserOriginal" />
 		
 		<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(&quot;item:6948&quot;)" WaitTime="15000" />
 		<TurnIn QuestName="Assault on the Ruins of Kra'nak" QuestId="38250" TurnInName="Exarch Yrel" TurnInId="90309" />
@@ -111,29 +113,31 @@
 			<CustomBehavior File="RunCode" Code="Logging.Write(System.Windows.Media.Colors.DeepSkyBlue, &quot;[Profile]: Moving to Zeth'gol.&quot;);"/>
 		</If>	
 		
-		<While Condition="!IsQuestCompleted(38045)">
-			<CustomBehavior File="InteractWith" MobId="90704" Range="4" WaitTime="1500" TerminateWhen="IsQuestCompleted(38045)" >
-				<HuntingGrounds WaypointVisitStrategy="Random" >
-					<Hotspot X="4039.532" Y="552.5905" Z="144.3611" />
-					<Hotspot X="4066.949" Y="510.654" Z="140.3789" />
-					<Hotspot X="4112.651" Y="476.4109" Z="140.7307" />
-					<Hotspot X="4161.684" Y="507.2393" Z="153.9762" />
-					<Hotspot X="4193.787" Y="488.9006" Z="159.3718" />
-					<Hotspot X="4251.705" Y="475.1672" Z="163.5509" />
-					<Hotspot X="4298.61" Y="459.5405" Z="174.2034" />
-					<Hotspot X="4314.555" Y="426.3798" Z="175.1043" />
-					<Hotspot X="4317.249" Y="359.7144" Z="176.6517" />
-					<Hotspot X="4303.318" Y="408.233" Z="175.5474" />
-					<Hotspot X="4301.896" Y="414.9223" Z="176.089" />
-					<Hotspot X="4273.771" Y="462.7543" Z="166.3339" />
-					<Hotspot X="4233.065" Y="481.0231" Z="161.1108" />
-					<Hotspot X="4196.424" Y="494.9789" Z="160.4004" />
-					<Hotspot X="4188.731" Y="497.9092" Z="159.5535" />
-					<Hotspot X="4125.643" Y="540.8347" Z="154.03" />
-					<Hotspot X="4058.341" Y="555.6857" Z="147.6552" />
-				</HuntingGrounds>
-			</CustomBehavior>
-		</While>
+		<CustomBehavior File="UserSettings" KillBetweenHotspots="true" />
+		
+		<CustomBehavior File="InteractWith" MobId="90704" NumOfTimes="100" WaitTime="1500" TerminateWhen="IsQuestCompleted(38045)" >
+			<HuntingGrounds WaypointVisitStrategy="Random" >
+				<Hotspot X="4039.532" Y="552.5905" Z="144.3611" />
+				<Hotspot X="4066.949" Y="510.654" Z="140.3789" />
+				<Hotspot X="4112.651" Y="476.4109" Z="140.7307" />
+				<Hotspot X="4161.684" Y="507.2393" Z="153.9762" />
+				<Hotspot X="4193.787" Y="488.9006" Z="159.3718" />
+				<Hotspot X="4251.705" Y="475.1672" Z="163.5509" />
+				<Hotspot X="4298.61" Y="459.5405" Z="174.2034" />
+				<Hotspot X="4314.555" Y="426.3798" Z="175.1043" />
+				<Hotspot X="4317.249" Y="359.7144" Z="176.6517" />
+				<Hotspot X="4303.318" Y="408.233" Z="175.5474" />
+				<Hotspot X="4301.896" Y="414.9223" Z="176.089" />
+				<Hotspot X="4273.771" Y="462.7543" Z="166.3339" />
+				<Hotspot X="4233.065" Y="481.0231" Z="161.1108" />
+				<Hotspot X="4196.424" Y="494.9789" Z="160.4004" />
+				<Hotspot X="4188.731" Y="497.9092" Z="159.5535" />
+				<Hotspot X="4125.643" Y="540.8347" Z="154.03" />
+				<Hotspot X="4058.341" Y="555.6857" Z="147.6552" />
+			</HuntingGrounds>
+		</CustomBehavior>
+		
+		<CustomBehavior File="UserSettings" Preset="UserOriginal" />
 	
 		<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(&quot;item:6948&quot;)" WaitTime="15000" />
 		<TurnIn Nav="Fly" QuestName="Bleeding the Bleeding Hollow" QuestId="38045" TurnInName="Exarch Yrel" TurnInId="90309" />
@@ -144,17 +148,20 @@
 		<If Condition="!IsQuestCompleted(37968)" >
 			<CustomBehavior File="RunCode" Code="Logging.Write(System.Windows.Media.Colors.DeepSkyBlue, &quot;[Profile]: Moving to Temple of Sha'naar.&quot;);"/>
 		</If>
-		<While Condition="!IsQuestCompleted(37968)">
-			<CustomBehavior File="InteractWith" MobIds="90501, 90302, 90687, 240165" Range="4" WaitTime="1500" TerminateWhen="IsQuestCompleted(37968)" >
-				<HuntingGrounds WaypointVisitStrategy="Random" >
-					<Hotspot X="3534.753" Y="211.627" Z="139.7309" />
-					<Hotspot X="3508.366" Y="136.7421" Z="149.1467" />
-					<Hotspot X="3545.823" Y="74.75066" Z="157.412" />
-					<Hotspot X="3343.649" Y="0.3435831" Z="169.5572" />
-					<Hotspot X="3245.297" Y="351.0324" Z="116.5274" />
-				</HuntingGrounds>
-			</CustomBehavior>
-		</While>
+
+		<CustomBehavior File="UserSettings" KillBetweenHotspots="true" />
+		
+		<CustomBehavior File="InteractWith" MobIds="90501, 90302, 90687, 240165" NumOfTimes="100" WaitTime="1500" TerminateWhen="IsQuestCompleted(37968)" >
+			<HuntingGrounds WaypointVisitStrategy="Random" >
+				<Hotspot X="3534.753" Y="211.627" Z="139.7309" />
+				<Hotspot X="3508.366" Y="136.7421" Z="149.1467" />
+				<Hotspot X="3545.823" Y="74.75066" Z="157.412" />
+				<Hotspot X="3343.649" Y="0.3435831" Z="169.5572" />
+				<Hotspot X="3245.297" Y="351.0324" Z="116.5274" />
+			</HuntingGrounds>
+		</CustomBehavior>
+		
+		<CustomBehavior File="UserSettings" Preset="UserOriginal" />
 		
 		<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(&quot;item:6948&quot;)" WaitTime="15000" />
 		<TurnIn QuestName="Assault on the Temple of Sha'naar" QuestId="37968" TurnInName="Exarch Yrel" TurnInId="90309" />
