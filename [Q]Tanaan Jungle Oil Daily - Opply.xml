@@ -84,8 +84,8 @@
 		</If>
 
 		<CustomBehavior File="UserSettings" KillBetweenHotspots="true" />
-		
-		<CustomBehavior File="InteractWith" MobIds="90795, 90300, 90706, 90790, 90791, 90796, 243852" NumOfTimes="100" WaitTime="1500" TerminateWhen="IsQuestCompleted(38250)" >
+
+		<CustomBehavior File="InteractWith" MobIds="90795, 90300, 90706, 90790, 90791, 90796, 90792, 243852" NumOfTimes="100" WaitTime="1500" TerminateWhen="IsQuestCompleted(38250)" >
 			<HuntingGrounds WaypointVisitStrategy="Random" >
 				<Hotspot X="4547.013" Y="449.2588" Z="229.8684" />
 				<Hotspot X="4555.957" Y="536.5192" Z="229.2842" />
