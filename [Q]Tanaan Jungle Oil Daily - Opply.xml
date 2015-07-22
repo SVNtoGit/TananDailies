@@ -56,7 +56,7 @@
 			<CustomBehavior File="RunCode" Code="Logging.Write(System.Windows.Media.Colors.DeepSkyBlue, &quot;[Profile]: Moving to The Fel Forge.&quot;);"/>
 			
 			<If Condition="Unit(90960, o =&gt; o.Distance &lt; 100 ) != null">
-				<CustomBehavior File="TaxiRide" MobId="90960" WaitForNpcs="false" DestName="Malo's Lookout, Tanaan Jungle"  WaitTime="1000" />
+				<CustomBehavior File="TaxiRide" MobId="90960" WaitForNpcs="false" DestName="s Lookout, Tanaan Jungle"  WaitTime="1000" />
 			</If>
 		</If>
 		
@@ -95,7 +95,7 @@
 			<CustomBehavior File="RunCode" Code="Logging.Write(System.Windows.Media.Colors.DeepSkyBlue, &quot;[Profile]: Moving to Kra'nak.&quot;);"/>
 			
 			<If Condition="Unit(90960, o =&gt; o.Distance &lt; 100 ) != null">
-				<CustomBehavior File="TaxiRide" MobId="90960" WaitForNpcs="false" DestName="Aktar's Post, Tanaan Jungle"  WaitTime="1000" />
+				<CustomBehavior File="TaxiRide" MobId="90960" WaitForNpcs="false" DestName="s Post, Tanaan Jungle"  WaitTime="1000" />
 			</If>
 		</If>
 		<CustomBehavior File="UserSettings" KillBetweenHotspots="true" />
@@ -141,7 +141,7 @@
 			<CustomBehavior File="RunCode" Code="Logging.Write(System.Windows.Media.Colors.DeepSkyBlue, &quot;[Profile]: Moving to Zeth'gol.&quot;);"/>
 			
 			<If Condition="Unit(90960, o =&gt; o.Distance &lt; 100 ) != null">
-				<CustomBehavior File="TaxiRide" MobId="90960" WaitForNpcs="false" DestName="Sha'naari Refuge, Tanaan Jungle"  WaitTime="1000" />
+				<CustomBehavior File="TaxiRide" MobId="90960" WaitForNpcs="false" DestName="naari Refuge, Tanaan Jungle"  WaitTime="1000" />
 			</If>
 		</If>	
 		<CustomBehavior File="UserSettings" KillBetweenHotspots="true" />
@@ -207,7 +207,7 @@
 			<CustomBehavior File="RunCode" Code="Logging.Write(System.Windows.Media.Colors.DeepSkyBlue, &quot;[Profile]: Moving to Ironhold Harbor.&quot;);"/>
 			
 			<If Condition="Unit(90960, o =&gt; o.Distance &lt; 100 ) != null">
-				<CustomBehavior File="TaxiRide" MobId="90960" WaitForNpcs="false" DestName="Malo's Lookout, Tanaan Jungle"  WaitTime="1000" />
+				<CustomBehavior File="TaxiRide" MobId="90960" WaitForNpcs="false" DestName="s Lookout, Tanaan Jungle"  WaitTime="1000" />
 			</If>
 		</If>
 		<CustomBehavior File="UserSettings" KillBetweenHotspots="true" />
