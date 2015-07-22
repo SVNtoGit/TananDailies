@@ -262,9 +262,9 @@
 		
 		<!-- if not in combat, and first aid bandages is less or equal 2 and medical supplies within 30 yard range, pick up medical supplies -->
 	<CustomBehavior File="Hooks\DoWhen" ActivityName="PickUpBandage" 
-	                UseWhen="(!Me.Combat) &amp;&amp; (GetItemCount(122139) &lt; 1) &amp;&amp; (Object(239971, o =&gt; o.Distance &lt; 30) != null)" >
+	                UseWhen="(!Me.Combat) &amp;&amp; (GetItemCount(122139) == 0) &amp;&amp; (Object(239971, o =&gt; o.Distance &lt; 30) != null)" >
 		<CustomBehavior File="InteractWith" WaitTime="3000" MobId="239971" NumOfTimes="100" CollectionDistance="45" PreInteractMountStrategy="Dismount" 
-		                TerminateWhen="GetItemCount(122139) &gt;= 1 || Object(239971, o =&gt; o.Distance &lt; 45) == null" />
+		                TerminateWhen="GetItemCount(122139) != 0 || Object(239971, o =&gt; o.Distance &lt; 45) == null" />
 	</CustomBehavior>
 
 	<!-- if not in combat, and first aid bandages is greater or equal 1 and injured footsoldier or iron horde banner within 30 yard range, pick up medical supplies -->
