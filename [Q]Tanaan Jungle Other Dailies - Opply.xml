@@ -389,16 +389,15 @@
 		</If>
 	
 		<!-- If we got other quests in this area, kill everything -->
-		<If Condition="HasQuest(39570) || HasQuest(38250)" >
+		<If Condition="(HasQuest(39570) &amp;&amp; !IsQuestCompleted(39570)) || (HasQuest(38250) &amp;&amp; !IsQuestCompleted(38250))" >
 			<CustomBehavior File="UserSettings" KillBetweenHotspots="true" />
 		</If>
-		<!-- If not, try to skip -->
-		<If Condition="!HasQuest(39570) &amp;&amp; !HasQuest(38250)" >
+		<Else>
 			<CustomBehavior File="UserSettings" KillBetweenHotspots="false" />
-		</If>
+		</Else>
 	
 		<While Condition="!IsQuestCompleted(39433)">
-			<CustomBehavior File="InteractWith" MobId="243852" Range="8" WaitTime="100" >
+			<CustomBehavior File="InteractWith" MobId="243852" WaitTime="100" >
 				<HuntingGrounds WaypointVisitStrategy="Random" >
 					<Hotspot X="4546.808" Y="486.0171" Z="226.6106" />
 					<Hotspot X="4639.002" Y="608.1016" Z="204.4243" />
@@ -410,9 +409,11 @@
 		
 		<CustomBehavior File="UserSettings" Preset="UserOriginal" />
 		
-		<CustomBehavior File="NoCombatMoveTo" X="4572.857" Y="336.026" Z="221.5237"  />
-		<CustomBehavior File="TaxiRide" MobId="90560" WaitForNpcs="false" DestName="s Watch, Tanaan Jungle"  WaitTime="1000" />
-		
+		<!-- Only fly back if we don't have Secrets of the Shadow Council -->
+		<If Condition="!(HasQuest(39570) &amp;&amp; !IsQuestCompleted(39570))" >
+			<CustomBehavior File="NoCombatMoveTo" X="4572.857" Y="336.026" Z="221.5237"  />
+			<CustomBehavior File="TaxiRide" MobId="90560" WaitForNpcs="false" DestName="s Watch, Tanaan Jungle"  WaitTime="1000" />
+		</If>
 	</If>
 	
 	<!-- Secrets of the Shadow Council -->
