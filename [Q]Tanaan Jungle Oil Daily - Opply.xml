@@ -141,7 +141,9 @@
 			<CustomBehavior File="RunCode" Code="Logging.Write(System.Windows.Media.Colors.DeepSkyBlue, &quot;[Profile]: Moving to Zeth'gol.&quot;);"/>
 			
 			<If Condition="Unit(90960, o =&gt; o.Distance &lt; 100 ) != null">
-				<CustomBehavior File="TaxiRide" MobId="90960" WaitForNpcs="false" DestName="naari Refuge, Tanaan Jungle"  WaitTime="1000" />
+				<CustomBehavior File="TaxiRide" MobId="90960" WaitForNpcs="false" DestName="Vault of the Earth, Tanaan Jungle"  WaitTime="1000" />
+				<CustomBehavior File="WaitTimer" WaitTime="1500" />
+				<CustomBehavior File="TaxiRide" MobId="90562" WaitForNpcs="false" DestName="naari Refuge, Tanaan Jungle"  WaitTime="1000" />
 			</If>
 		</If>	
 		<CustomBehavior File="UserSettings" KillBetweenHotspots="true" />
@@ -173,19 +175,21 @@
 		<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(&quot;item:6948&quot;)" WaitTime="15000" />
 		<TurnIn Nav="Fly" QuestName="Bleeding the Bleeding Hollow" QuestId="38045" TurnInName="Exarch Yrel" TurnInId="90309" />
 	</If>
-	
+
 	<!-- Temple of Sha'naar -->
 	<If Condition="HasQuest(37968)" >
 		<If Condition="!IsQuestCompleted(37968)" >
 			<CustomBehavior File="RunCode" Code="Logging.Write(System.Windows.Media.Colors.DeepSkyBlue, &quot;[Profile]: Moving to Temple of Sha'naar.&quot;);"/>
 			
 			<If Condition="Unit(90960, o =&gt; o.Distance &lt; 100 ) != null">
-				<CustomBehavior File="TaxiRide" MobId="90960" WaitForNpcs="false" DestName="Sha'naari Refuge, Tanaan Jungle"  WaitTime="1000" />
+				<CustomBehavior File="TaxiRide" MobId="90960" WaitForNpcs="false" DestName="Vault of the Earth, Tanaan Jungle"  WaitTime="1000" />
+				<CustomBehavior File="WaitTimer" WaitTime="1500" />
+				<CustomBehavior File="TaxiRide" MobId="90562" WaitForNpcs="false" DestName="naari Refuge, Tanaan Jungle"  WaitTime="1000" />
 			</If>
 		</If>
 		<CustomBehavior File="UserSettings" KillBetweenHotspots="true" />
 		
-		<CustomBehavior File="InteractWith" MobIds="90501, 90302, 90687, 240165" NumOfTimes="100" WaitTime="1500" TerminateWhen="IsQuestCompleted(37968)" >
+		<CustomBehavior File="InteractWith" MobIds="90501, 90302, 90687, 240165, 90703" NumOfTimes="100" WaitTime="1500" TerminateWhen="IsQuestCompleted(37968)" >
 			<HuntingGrounds WaypointVisitStrategy="Random" >
 				<Hotspot X="3534.753" Y="211.627" Z="139.7309" />
 				<Hotspot X="3508.366" Y="136.7421" Z="149.1467" />

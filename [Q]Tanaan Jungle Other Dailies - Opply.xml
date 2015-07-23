@@ -267,7 +267,9 @@
 		<CustomBehavior File="RunCode" Code="Logging.Write(System.Windows.Media.Colors.DeepSkyBlue, &quot;[Profile]: Doing Bloodied Blades of Zeth'Gol.&quot;);"/>
 		
 		<If Condition="Unit(90960, o =&gt; o.Distance &lt; 100 ) != null">
-			<CustomBehavior File="TaxiRide" MobId="90960" WaitForNpcs="false" DestName="naari Refuge, Tanaan Jungle"  WaitTime="1000" />
+			<CustomBehavior File="TaxiRide" MobId="90960" WaitForNpcs="false" DestName="Vault of the Earth, Tanaan Jungle"  WaitTime="1000" />
+			<CustomBehavior File="WaitTimer" WaitTime="1500" />
+			<CustomBehavior File="TaxiRide" MobId="90562" WaitForNpcs="false" DestName="naari Refuge, Tanaan Jungle"  WaitTime="1000" />
 		</If>
 		
 		<SetGrindArea>
@@ -313,7 +315,9 @@
 		<CustomBehavior File="RunCode" Code="Logging.Write(System.Windows.Media.Colors.DeepSkyBlue, &quot;[Profile]: Doing Disarming Sha'naar.&quot;);"/>
 		
 		<If Condition="Unit(90960, o =&gt; o.Distance &lt; 100 ) != null">
-			<CustomBehavior File="TaxiRide" MobId="90960" WaitForNpcs="false" DestName="naari Refuge, Tanaan Jungle"  WaitTime="1000" />
+			<CustomBehavior File="TaxiRide" MobId="90960" WaitForNpcs="false" DestName="Vault of the Earth, Tanaan Jungle"  WaitTime="1000" />
+			<CustomBehavior File="WaitTimer" WaitTime="1500" />
+			<CustomBehavior File="TaxiRide" MobId="90562" WaitForNpcs="false" DestName="naari Refuge, Tanaan Jungle"  WaitTime="1000" />
 		</If>
 		
 		<While Condition="!IsQuestCompleted(39571)">
