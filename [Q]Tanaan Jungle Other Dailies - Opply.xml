@@ -72,7 +72,7 @@
 			<GrindArea>
 				<TargetMinLevel>90</TargetMinLevel>
 				<TargetMaxLevel>101</TargetMaxLevel>
-				<MaxDistance>60</MaxDistance>
+				<MaxDistance>100</MaxDistance>
 				<LootRadius>60</LootRadius>
 				<TargetElites>false</TargetElites>
 				<RandomizeHotspots>true</RandomizeHotspots>
@@ -396,16 +396,14 @@
 			<CustomBehavior File="UserSettings" KillBetweenHotspots="false" />
 		</Else>
 	
-		<While Condition="!IsQuestCompleted(39433)">
-			<CustomBehavior File="InteractWith" MobId="243852" WaitTime="100" >
-				<HuntingGrounds WaypointVisitStrategy="Random" >
-					<Hotspot X="4546.808" Y="486.0171" Z="226.6106" />
-					<Hotspot X="4639.002" Y="608.1016" Z="204.4243" />
-					<Hotspot X="4523.261" Y="653.3411" Z="175.3183" />
-					<Hotspot X="4409.374" Y="820.7141" Z="175.4831" />
-				</HuntingGrounds>
-			</CustomBehavior>
-		</While>
+		<CustomBehavior File="InteractWith" MobId="243852" NumOfTimes="100" WaitTime="1500" TerminateWhen="IsQuestCompleted(39433)" >
+			<HuntingGrounds WaypointVisitStrategy="Random" >
+				<Hotspot X="4546.808" Y="486.0171" Z="226.6106" />
+				<Hotspot X="4639.002" Y="608.1016" Z="204.4243" />
+				<Hotspot X="4523.261" Y="653.3411" Z="175.3183" />
+				<Hotspot X="4409.374" Y="820.7141" Z="175.4831" />
+			</HuntingGrounds>
+		</CustomBehavior>
 		
 		<CustomBehavior File="UserSettings" Preset="UserOriginal" />
 		
