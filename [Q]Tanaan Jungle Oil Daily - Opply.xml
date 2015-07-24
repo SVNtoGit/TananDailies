@@ -307,6 +307,6 @@
 		<TurnIn QuestName="Battle At The Iron Front" QuestId="38046" TurnInName="Exarch Yrel" TurnInId="90309" />
 	</If>
 	
-	<CustomBehavior File="RunCode" Code="Styx.CommonBot.TreeRoot.Stop(&quot;Profile complete...&quot;)" />
+	<CustomBehavior File="LoadProfile" ProfileName="[Q]Tanaan Jungle Other Dailies - Opply"  />
 </QuestOrder>
 </HBProfile>

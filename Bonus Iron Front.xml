@@ -50,7 +50,7 @@
 		<GrindArea>
 			<TargetMinLevel>99</TargetMinLevel>
 			<TargetMaxLevel>101</TargetMaxLevel>
-			<MaxDistance>40</MaxDistance>
+			<MaxDistance>50</MaxDistance>
 			<LootRadius>60</LootRadius>
 			<TargetElites>false</TargetElites>
 			<RandomizeHotspots>true</RandomizeHotspots>
@@ -64,7 +64,7 @@
 			</Hotspots>
 			</GrindArea>    
 		</SetGrindArea>
-	<GrindUntil Nav="Fly" Condition="IsQuestCompleted(38046)" />
+	<GrindUntil Nav="Fly" Condition="IsQuestCompleted(38051)" />
 	
 	<CustomBehavior File="Hooks\DoWhen" ActivityName="PickUpBandage" Command="Remove" />
 	<CustomBehavior File="Hooks\DoWhen" ActivityName="InteractWithObject" Command="Remove" />

@@ -343,7 +343,9 @@
 		</While>
 		
 		<CustomBehavior File="NoCombatMoveTo" X="3723.544" Y="156.7639" Z="56.12444"  />
-		<CustomBehavior File="TaxiRide" MobId="92809" WaitForNpcs="false" DestName="s Watch, Tanaan Jungle"  WaitTime="1000" />
+		<CustomBehavior File="TaxiRide" MobId="92809" WaitForNpcs="false" DestName="Vault of the Earth, Tanaan Jungle"  WaitTime="1000" />
+		<CustomBehavior File="WaitTimer" WaitTime="1500" />
+		<CustomBehavior File="TaxiRide" MobId="90562" WaitForNpcs="false" DestName="s Watch, Tanaan Jungle"  WaitTime="1000" />
 		
 	</If>
 	
