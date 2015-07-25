@@ -273,9 +273,9 @@
 
 	<!-- if not in combat, and first aid bandages is greater or equal 1 and injured footsoldier or iron horde banner within 30 yard range, pick up medical supplies -->
 	<CustomBehavior File="Hooks\DoWhen" ActivityName="InteractWithObject" 
-	                UseWhen="(!Me.Combat) &amp;&amp; (GetItemCount(122139) &gt;= 1) &amp;&amp; ((Unit(90443, o =&gt; o.Distance &lt; 30 &amp;&amp; o.HealthPercent &lt; 50 ) != null) || (Unit(90370, o =&gt; o.Distance &lt; 30) != null))" >
-		<CustomBehavior File="InteractWith" WaitTime="3000" MobIds="90443, 90370" NumOfTimes="100" Range="3" CollectionDistance="45" PreInteractMountStrategy="Dismount" 
-		                TerminateWhen="(GetItemCount(122139) &lt;= 0) || ((Unit(90443, o =&gt; o.Distance &lt; 45 &amp;&amp; o.HealthPercent &lt;= 50 ) == null) &amp;&amp; (Unit(90370, o =&gt; o.Distance &lt; 45) == null))" />
+	                UseWhen="(!Me.Combat) &amp;&amp; (GetItemCount(122139) &gt;= 1) &amp;&amp; ((Unit(90452, o =&gt; o.Distance &lt; 30 &amp;&amp; o.HealthPercent &lt; 50 ) != null) || (Unit(90370, o =&gt; o.Distance &lt; 30) != null))" >
+		<CustomBehavior File="InteractWith" WaitTime="3000" MobIds="90452, 90370" NumOfTimes="100" Range="3" CollectionDistance="45" PreInteractMountStrategy="Dismount" 
+		                TerminateWhen="(GetItemCount(122139) &lt;= 0) || ((Unit(90452, o =&gt; o.Distance &lt; 45 &amp;&amp; o.HealthPercent &lt;= 50 ) == null) &amp;&amp; (Unit(90370, o =&gt; o.Distance &lt; 45) == null))" />
 	</CustomBehavior>
 		
 		<SetGrindArea>
