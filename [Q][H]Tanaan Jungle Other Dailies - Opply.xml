@@ -502,7 +502,7 @@
 		<GrindUntil Nav="Fly" Condition="IsQuestCompleted(39514)" />
 		
 		<CustomBehavior File="NoCombatMoveTo" X="4076.012" Y="1181.747" Z="160.929"  />
-		<CustomBehavior File="TaxiRide" MobId="91940" WaitForNpcs="false" DestName="mar, Tanaan Jungle"  WaitTime="1000" />
+		<CustomBehavior File="TaxiRide" MobId="90552" WaitForNpcs="false" DestName="mar, Tanaan Jungle"  WaitTime="1000" />
 		
 	</If>
 	
