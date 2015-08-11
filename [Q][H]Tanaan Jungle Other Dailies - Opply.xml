@@ -60,132 +60,6 @@
 		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()"  />
 	</If>
 	
-	
-	<!-- DO 2 BONUS OBJECTIVES FOR QUEST -->
-	
-	<!-- START KRA'NAK OBJECTIVE -->
-    <If Condition="!IsQuestCompleted(38009) &amp;&amp; !IsQuestCompleted(39448) &amp;&amp; !IsQuestCompleted(39526)">
-    <CustomBehavior File="Message" Text="Starting Kra'nak Objective" LogColor="Cyan" />
-    <If Condition="!HasQuest(39448) &amp;&amp; !HasQuest(38869)">
-    <MoveTo Nav="Fly" DestName="Vol'mar Flight Master Gargash the Diver" X="4308.067" Y="-1463.92" Z="79.05192" />
-    <CustomBehavior File="TaxiRide" MobId="90550" DestName="Aktar" WaitTime="1000" />
-    <MoveTo Nav="Fly" DestName="Kra'nak objective area" X="4547.663" Y="494.8257" Z="226.3827" />
-    </If>
-    <CustomBehavior File="UserSettings" KillBetweenHotspots="True"/>
-    
-    <CustomBehavior File="InteractWith" TerminateWhen="IsQuestCompleted(39448)" NumOfTimes="1000" AttemptCountMax="1" MobIds="90300, 90795, 90790, 90796, 90791, 90706, 90794, 243852, 90792" CollectionDistance="50" >
-      <HuntingGrounds>
-        <Hotspot X="4541.623" Y="468.6111" Z="226.6357" />
-        <Hotspot X="4576.191" Y="500.3154" Z="229.2171" />
-        <Hotspot X="4546.569" Y="536.3596" Z="229.3459" />
-        <Hotspot X="4640.047" Y="560.6305" Z="204.3542" />
-        <Hotspot X="4657.554" Y="615.0024" Z="203.197" />
-        <Hotspot X="4620.121" Y="621.6279" Z="202.0926" />
-        <Hotspot X="4609.431" Y="589.7399" Z="201.6186" />
-        <Hotspot X="4547.598" Y="615.6188" Z="187.0076" />
-        <Hotspot X="4531.45" Y="669.9689" Z="175.6147" />
-        <Hotspot X="4514.276" Y="738.2649" Z="175.6593" />
-        <Hotspot X="4464.076" Y="762.912" Z="181.2571" />
-        <Hotspot X="4442.307" Y="818.7935" Z="176.7214" />
-        <Hotspot X="4382.895" Y="810.3451" Z="178.077" />
-        <Hotspot X="4515.839" Y="492.1848" Z="229.1208" />
-      </HuntingGrounds>
-    </CustomBehavior>
-    
-    <CustomBehavior File="UserSettings" KillBetweenHotspots="False"/>
-    <Else>
-      <CustomBehavior File="Message" Text="Kra'nak is done" LogColor="Cyan" />
-    </Else>
-    </If>
-    <!-- END KRA'NAK OBJECTIVE -->
-	
-	 <!-- START BLEEDING Hollow OBJECTIVE -->
-    <If Condition="!IsQuestCompleted(38040) &amp;&amp; !IsQuestCompleted(39442) &amp;&amp; !IsQuestCompleted(39526)">
-    <CustomBehavior File="Message" Text="Starting Bleeding Hollow Objective" LogColor="Cyan" />
-
-    <If Condition="!HasQuest(39442) &amp;&amp; !HasQuest(38871)">
-      <If Condition="IsQuestCompleted(38250) &amp;&amp; IsQuestCompleted(38009)">
-       <CustomBehavior File="Message" Text="Moving to Vol'mar Flight Master" LogColor="Cyan" />
-       <MoveTo Nav="Fly" DestName="Vol'mar Flight Master Gargash the Diver" X="4308.067" Y="-1463.92" Z="79.05192" />
-       <CustomBehavior File="TaxiRide" MobId="90550" DestName="Vault of the Earth" WaitTime="3000" />
-       <CustomBehavior File="WaitTimer" WaitTime="3000" />
-       <MoveTo Nav="Fly" DestName="Vault of the Earth Flight Master(Urtol Skyshear)" X="3472.494" Y="-762.8229" Z="40.86291" />
-       <CustomBehavior File="TaxiRide" MobId="90562" DestName="naari Refuge" WaitTime="3000" />
-     </If>
-     <MoveTo Nav="Fly" DestName="Bleeding Hollow objective area" X="4050.303" Y="555.0275" Z="146.6669" />
-    </If>
-    <CustomBehavior File="UserSettings" KillBetweenHotspots="True"/>
-    
-    <CustomBehavior File="InteractWith" TerminateWhen="IsQuestCompleted(39442)" NumOfTimes="1000" AttemptCountMax="1" MobIds="90704, 243796" CollectionDistance="50" >
-      <HuntingGrounds>
-       <Hotspot X="4062.008" Y="505.3807" Z="139.7379" />
-       <Hotspot X="4076.235" Y="469.1242" Z="138.7358" />
-       <Hotspot X="4098.804" Y="466.1629" Z="139.8618" />
-       <Hotspot X="4117.279" Y="483.7459" Z="141.2325" />
-       <Hotspot X="4149.899" Y="507.0602" Z="154.034" />
-       <Hotspot X="4181.738" Y="433.7738" Z="169.8506" />
-       <Hotspot X="4224.911" Y="554.1545" Z="173.3994" />
-       <Hotspot X="4294.043" Y="467.8152" Z="173.021" />
-       <Hotspot X="4290.678" Y="427.5628" Z="176.0042" />
-       <Hotspot X="4303.681" Y="389.8268" Z="175.7207" />
-       <Hotspot X="4284.301" Y="481.4424" Z="171.8622" />
-     </HuntingGrounds>
-    </CustomBehavior>
-
-    <CustomBehavior File="UserSettings" KillBetweenHotspots="False"/>
-    <Else>
-    <CustomBehavior File="Message" Text="Bleeding Hollow is done" LogColor="Cyan" />
-    </Else>
-    </If>
-    <!-- END BLEEDING Hollow OBJECTIVE -->
-	
-	<!-- START IRON FRONT OBJECTIVE -->
-    <If Condition="!IsQuestCompleted(38054) &amp;&amp; !IsQuestCompleted(39444) &amp;&amp; !IsQuestCompleted(39526)">
-    <CustomBehavior File="Message" Text="Starting Iron Front Objective" LogColor="Cyan" />
-    <If Condition="!HasQuest(39444)">
-    <MoveTo Nav="Fly" DestName="Iron Front objective area" X="3886.046" Y="781.1364" Z="148.9213" />
-    </If>
-    <CustomBehavior File="UserSettings" KillBetweenHotspots="True"/>
-    
-    <CustomBehavior File="InteractWith" TerminateWhen="IsQuestCompleted(39444)" NumOfTimes="1000" AttemptCountMax="1" WaitTime="0" MobIds="90370, 93013, 243796" CollectionDistance="50" >
-     <AvoidMobs>
-       <Mob Name="Iron Wargronn" Entry="90585" />
-     </AvoidMobs>
-     <Blackspots>
-      <Blackspot X="3937.037" Y="804.8176" Z="147.097" Radius="5" />
-      <Blackspot X="3976.165" Y="850.2608" Z="152.6816" Radius="5.141547" />
-      <Blackspot X="3885.915" Y="918.179" Z="155.0628" Radius="8.572583" />
-      <Blackspot X="3946.901" Y="843.2472" Z="152.6826" Radius="6.20531" />
-    </Blackspots>
-    <HuntingGrounds>
-     <Hotspot X="3857.176" Y="856.3193" Z="196.8948" />
-     <Hotspot X="3852.557" Y="872.418" Z="196.8731" />
-     <Hotspot X="3846.508" Y="857.0004" Z="161.0175" />
-     <Hotspot X="3862.88" Y="871.4757" Z="161.0174" />
-     <Hotspot X="3882.741" Y="845.8213" Z="152.6842" />
-     <Hotspot X="3868.308" Y="828.9254" Z="152.7003" />
-     <Hotspot X="3884.478" Y="780.6083" Z="148.7457" />
-     <Hotspot X="3930.163" Y="810.7324" Z="147.1459" />
-     <Hotspot X="3880.827" Y="885.1335" Z="152.6934" />
-     <Hotspot X="3934.691" Y="944.9603" Z="157.9065" />
-     <Hotspot X="4009.158" Y="900.8925" Z="153.0219" />
-     <Hotspot X="3983.613" Y="846.3415" Z="152.6846" />
-    </HuntingGrounds>
-    <PursuitList>
-     <PursueUnit Id="91251" PursueWhen="HasQuest(39569) &amp;&amp; !IsQuestCompleted(39569) &amp;&amp; UNIT.IsAlive" Priority="100" />
-     <PursueUnit Id="90482" PursueWhen="HasQuest(39569) &amp;&amp; !IsQuestCompleted(39569) &amp;&amp; UNIT.IsAlive" Priority="100" />
-     <PursueUnit Id="92873" PursueWhen="HasQuest(39569) &amp;&amp; !IsQuestCompleted(39569) &amp;&amp; UNIT.IsAlive" Priority="100" />
-    </PursuitList>
-    </CustomBehavior>
-
-    <CustomBehavior File="UserSettings" KillBetweenHotspots="False"/>
-    <Else>
-    <CustomBehavior File="Message" Text="Iron Front is done" LogColor="Cyan" />
-    </Else>
-    </If>
-    <!-- END IRON FRONT OBJECTIVE -->
-	
-	
 	<!-- DO THE QUESTS -->
 	
 	<!-- Demonslayer of Tanaan -->
@@ -216,8 +90,6 @@
 		<GrindUntil Nav="Fly" Condition="IsQuestCompleted(39519)" />
 		
 		<CustomBehavior File="UserSettings" Preset="UserOriginal" />
-		
-		<CustomBehavior File="NoCombatMoveTo" X="4303.907" Y="-1473.343" Z="79.84026"  />
 	</If>
 	
 	<!-- Bringing Down the Iron Horde -->
@@ -252,8 +124,6 @@
 			</GrindArea>    
 		</SetGrindArea>
 		<GrindUntil Nav="Fly" Condition="IsQuestCompleted(39532)" />
-		
-		<CustomBehavior File="NoCombatMoveTo" X="4303.907" Y="-1473.343" Z="79.84026"  />
 	</If>
 	
 	<!-- Breaking Their Fel Bonds -->
@@ -288,17 +158,11 @@
 			</GrindArea>    
 		</SetGrindArea>
 		<GrindUntil Nav="Fly" Condition="IsQuestCompleted(39511)" />
-		
-		<CustomBehavior File="NoCombatMoveTo" X="4303.907" Y="-1473.343" Z="79.84026"  />
 	</If>
 	
 	<!-- Tooth and Claw -->
 	<If Condition="HasQuest(39529) &amp;&amp; !IsQuestCompleted(39529)" >
 		<CustomBehavior File="RunCode" Code="Logging.Write(System.Windows.Media.Colors.DeepSkyBlue, &quot;[Profile]: Doing Tooth and Claw.&quot;);"/>
-		
-		<If Condition="Unit(90550, o =&gt; o.Distance &lt; 100 ) != null">
-			<CustomBehavior File="TaxiRide" MobId="90550" WaitForNpcs="false" DestName="Vault of the Earth, Tanaan Jungle"  WaitTime="1000" />
-		</If>
 		
 		<SetGrindArea>
 			<GrindArea>
@@ -346,19 +210,11 @@
 			</GrindArea>    
 		</SetGrindArea>
 		<GrindUntil Nav="Fly" Condition="IsQuestCompleted(39529)" />
-		
-		<CustomBehavior File="NoCombatMoveTo" X="3472.494" Y="-762.8229" Z="40.86333"  />
-		<CustomBehavior File="TaxiRide" MobId="90562" WaitForNpcs="false" DestName="mar, Tanaan Jungle"  WaitTime="1000" />
-		
 	</If>
 	
 	<!-- A Little Wetwork -->
 	<If Condition="HasQuest(39510) &amp;&amp; !IsQuestCompleted(39510)" >
 		<CustomBehavior File="RunCode" Code="Logging.Write(System.Windows.Media.Colors.DeepSkyBlue, &quot;[Profile]: Doing A Little Wetwork.&quot;);"/>
-		
-		<If Condition="Unit(90550, o =&gt; o.Distance &lt; 100 ) != null">
-			<CustomBehavior File="TaxiRide" MobId="90550" WaitForNpcs="false" DestName="s Lookout, Tanaan Jungle"  WaitTime="1000" />
-		</If>
 		
 		<SetGrindArea>
 			<GrindArea>
@@ -382,21 +238,11 @@
 				</GrindArea>    
 			</SetGrindArea>
 		<GrindUntil Nav="Fly" Condition="IsQuestCompleted(39510)" />
-		
-		<CustomBehavior File="NoCombatMoveTo" X="4455.004" Y="-570.0504" Z="49.80917"  />
-		<CustomBehavior File="TaxiRide" MobId="92808" WaitForNpcs="false" DestName="mar, Tanaan Jungle"  WaitTime="1000" />
-		
 	</If>
 	
 	<!-- Bloodied Blades of Zeth'Gol -->
 	<If Condition="HasQuest(39509) &amp;&amp; !IsQuestCompleted(39509)" >
 		<CustomBehavior File="RunCode" Code="Logging.Write(System.Windows.Media.Colors.DeepSkyBlue, &quot;[Profile]: Doing Bloodied Blades of Zeth'Gol.&quot;);"/>
-		
-		<If Condition="Unit(90550, o =&gt; o.Distance &lt; 100 ) != null">
-			<CustomBehavior File="TaxiRide" MobId="90550" WaitForNpcs="false" DestName="Vault of the Earth, Tanaan Jungle"  WaitTime="1000" />
-			<CustomBehavior File="WaitTimer" WaitTime="1500" />
-			<CustomBehavior File="TaxiRide" MobId="90562" WaitForNpcs="false" DestName="naari Refuge, Tanaan Jungle"  WaitTime="1000" />
-		</If>
 		
 		<SetGrindArea>
 			<GrindArea>
@@ -430,21 +276,11 @@
 				</GrindArea>    
 			</SetGrindArea>
 		<GrindUntil Nav="Fly" Condition="IsQuestCompleted(39509)" />
-		
-		<CustomBehavior File="NoCombatMoveTo" X="3723.544" Y="156.7639" Z="56.12444"  />
-		<CustomBehavior File="TaxiRide" MobId="92809" WaitForNpcs="false" DestName="mar, Tanaan Jungle"  WaitTime="1000" />
-		
 	</If>
 	
 	<!-- Disarming Sha'naar -->
 	<If Condition="HasQuest(39513) &amp;&amp; !IsQuestCompleted(39513)" >
 		<CustomBehavior File="RunCode" Code="Logging.Write(System.Windows.Media.Colors.DeepSkyBlue, &quot;[Profile]: Doing Disarming Sha'naar.&quot;);"/>
-		
-		<If Condition="Unit(90550, o =&gt; o.Distance &lt; 100 ) != null">
-			<CustomBehavior File="TaxiRide" MobId="90550" WaitForNpcs="false" DestName="Vault of the Earth, Tanaan Jungle"  WaitTime="1000" />
-			<CustomBehavior File="WaitTimer" WaitTime="1500" />
-			<CustomBehavior File="TaxiRide" MobId="90562" WaitForNpcs="false" DestName="naari Refuge, Tanaan Jungle"  WaitTime="1000" />
-		</If>
 		
 		<While Condition="!IsQuestCompleted(39513)">
 			<CustomBehavior File="InteractWith" MobId="243794" NonCompeteDistance="0" Range="8" WaitTime="1000" >
@@ -467,20 +303,12 @@
 				</HuntingGrounds>
 			</CustomBehavior>
 		</While>
-		
-		<CustomBehavior File="NoCombatMoveTo" X="3723.544" Y="156.7639" Z="56.12444"  />
-		<CustomBehavior File="TaxiRide" MobId="92809" WaitForNpcs="false" DestName="mar, Tanaan Jungle"  WaitTime="1000" />
-		
 	</If>
 	
 	<!-- Harnessing Their Power -->
 	<If Condition="HasQuest(39514) &amp;&amp; !IsQuestCompleted(39514)" >
 		<CustomBehavior File="RunCode" Code="Logging.Write(System.Windows.Media.Colors.DeepSkyBlue, &quot;[Profile]: Doing Harnessing Their Power.&quot;);"/>
-		
-		<If Condition="Unit(90550, o =&gt; o.Distance &lt; 100 ) != null">
-			<CustomBehavior File="TaxiRide" MobId="90550" WaitForNpcs="false" DestName="The Iron Front, Tanaan Jungle"  WaitTime="1000" />
-		</If>
-		
+
 		<SetGrindArea>
 			<GrindArea>
 				<TargetMinLevel>99</TargetMinLevel>
@@ -500,19 +328,11 @@
 				</GrindArea>    
 			</SetGrindArea>
 		<GrindUntil Nav="Fly" Condition="IsQuestCompleted(39514)" />
-		
-		<CustomBehavior File="NoCombatMoveTo" X="4076.012" Y="1181.747" Z="160.929"  />
-		<CustomBehavior File="TaxiRide" MobId="90552" WaitForNpcs="false" DestName="mar, Tanaan Jungle"  WaitTime="1000" />
-		
 	</If>
 	
 	<!-- Unseen Influence -->
 	<If Condition="HasQuest(39433) &amp;&amp; !IsQuestCompleted(39433)" >
 		<CustomBehavior File="RunCode" Code="Logging.Write(System.Windows.Media.Colors.DeepSkyBlue, &quot;[Profile]: Doing Unseen Influence.&quot;);"/>
-	
-		<If Condition="Unit(90550, o =&gt; o.Distance &lt; 100 ) != null">
-			<CustomBehavior File="TaxiRide" MobId="90550" WaitForNpcs="false" DestName="s Post, Tanaan Jungle"  WaitTime="1000" />
-		</If>
 	
 		<!-- If we got other quests in this area, kill everything -->
 		<If Condition="(HasQuest(39512) &amp;&amp; !IsQuestCompleted(39512)) || (HasQuest(38250) &amp;&amp; !IsQuestCompleted(38250))" >
@@ -532,21 +352,10 @@
 		</CustomBehavior>
 		
 		<CustomBehavior File="UserSettings" Preset="UserOriginal" />
-		
-		<!-- Only fly back if we don't have Secrets of the Shadow Council -->
-		<If Condition="!(HasQuest(39512) &amp;&amp; !IsQuestCompleted(39512))" >
-			<CustomBehavior File="NoCombatMoveTo" X="4572.857" Y="336.026" Z="221.5237"  />
-			<CustomBehavior File="TaxiRide" MobId="90560" WaitForNpcs="false" DestName="mar, Tanaan Jungle"  WaitTime="1000" />
-		</If>
 	</If>
 	
 	<!-- Secrets of the Shadow Council -->
 	<If Condition="HasQuest(39512) &amp;&amp; !IsQuestCompleted(39512)" >
-	
-		<If Condition="Unit(90550, o =&gt; o.Distance &lt; 100 ) != null">
-			<CustomBehavior File="TaxiRide" MobId="90550" WaitForNpcs="false" DestName="s Post, Tanaan Jungle"  WaitTime="1000" />
-		</If>
-	
 		<CustomBehavior File="RunCode" Code="Logging.Write(System.Windows.Media.Colors.DeepSkyBlue, &quot;[Profile]: Doing Secrets of the Shadow Council.&quot;);"/>
 		<SetGrindArea>
 			<GrindArea>
@@ -573,18 +382,13 @@
 				</GrindArea>    
 			</SetGrindArea>
 		<GrindUntil Nav="Fly" Condition="IsQuestCompleted(39512)" />
-		
-		<CustomBehavior File="NoCombatMoveTo" X="4572.857" Y="336.026" Z="221.5237"  />
-		<CustomBehavior File="TaxiRide" MobId="90560" WaitForNpcs="false" DestName="mar, Tanaan Jungle"  WaitTime="1000" />
-		
 	</If>
 	
 	<!-- END OF DO QUESTS -->
 	
-	<If Condition="Unit(90550, o =&gt; o.Distance &lt; 100 ) == null">
-		<CustomBehavior File="RunCode" Code="Logging.Write(System.Windows.Media.Colors.DeepSkyBlue, &quot;[Profile]: Done with quests, HS back to Vol'mar, Tanaan Jungle.&quot;);"/>
+	<While Condition="Me.BagItems.FirstOrDefault(h => h.Entry == 6948).Cooldown == 0"> <!-- HS -->
 		<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(&quot;item:6948&quot;)" WaitTime="15000" />
-	</If>
+	</While>
 	
 	<!-- TURN IN QUESTS -->
 	

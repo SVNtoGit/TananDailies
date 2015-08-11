@@ -54,10 +54,6 @@
 	<If Condition="HasQuest(38440)" >
 		<If Condition="!IsQuestCompleted(38440)" >
 			<CustomBehavior File="RunCode" Code="Logging.Write(System.Windows.Media.Colors.DeepSkyBlue, &quot;[Profile]: Moving to The Fel Forge.&quot;);"/>
-			
-			<If Condition="Unit(90960, o =&gt; o.Distance &lt; 100 ) != null">
-				<CustomBehavior File="TaxiRide" MobId="90960" WaitForNpcs="false" DestName="s Lookout, Tanaan Jungle"  WaitTime="1000" />
-			</If>
 		</If>
 		
 		<SetGrindArea>
@@ -84,19 +80,12 @@
 				</GrindArea>    
 			</SetGrindArea>
 		<GrindUntil Nav="Fly" Condition="IsQuestCompleted(38440)" />
-		
-		<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(&quot;item:6948&quot;)" WaitTime="15000" />
-		<TurnIn Nav="Fly" QuestName="Assault on The Fel Forge" QuestId="38440" TurnInName="Exarch Yrel" TurnInId="90309" />
 	</If>
 	
 	<!-- Ruins of Kra'nak -->
 	<If Condition="HasQuest(38250)" >
 		<If Condition="!IsQuestCompleted(38250)" >
 			<CustomBehavior File="RunCode" Code="Logging.Write(System.Windows.Media.Colors.DeepSkyBlue, &quot;[Profile]: Moving to Kra'nak.&quot;);"/>
-			
-			<If Condition="Unit(90960, o =&gt; o.Distance &lt; 100 ) != null">
-				<CustomBehavior File="TaxiRide" MobId="90960" WaitForNpcs="false" DestName="s Post, Tanaan Jungle"  WaitTime="1000" />
-			</If>
 		</If>
 		<CustomBehavior File="UserSettings" KillBetweenHotspots="true" />
 
@@ -124,14 +113,6 @@
 		</If>
 		
 		<CustomBehavior File="UserSettings" Preset="UserOriginal" />
-		
-		<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(&quot;item:6948&quot;)" WaitTime="15000" />
-		<TurnIn QuestName="Assault on the Ruins of Kra'nak" QuestId="38250" TurnInName="Exarch Yrel" TurnInId="90309" />
-		
-		<!-- Unseen Influence -->
-		<If Condition="HasQuest(39433) &amp;&amp; IsQuestCompleted(39433)" >
-			<TurnIn Nav="Fly" QuestName="Unseen Influence" QuestId="39433" TurnInName="Dawn-Seeker Krisek" TurnInId="95424" X="3855.705" Y="-1335.908" Z="91.15343" />
-		</If>
 	</If>
 	
 	
@@ -139,12 +120,6 @@
 	<If Condition="HasQuest(38045)" >
 		<If Condition="!IsQuestCompleted(38045)" >
 			<CustomBehavior File="RunCode" Code="Logging.Write(System.Windows.Media.Colors.DeepSkyBlue, &quot;[Profile]: Moving to Zeth'gol.&quot;);"/>
-			
-			<If Condition="Unit(90960, o =&gt; o.Distance &lt; 100 ) != null">
-				<CustomBehavior File="TaxiRide" MobId="90960" WaitForNpcs="false" DestName="Vault of the Earth, Tanaan Jungle"  WaitTime="1000" />
-				<CustomBehavior File="WaitTimer" WaitTime="1500" />
-				<CustomBehavior File="TaxiRide" MobId="90562" WaitForNpcs="false" DestName="naari Refuge, Tanaan Jungle"  WaitTime="1000" />
-			</If>
 		</If>	
 		<CustomBehavior File="UserSettings" KillBetweenHotspots="true" />
 		
@@ -171,21 +146,12 @@
 		</CustomBehavior>
 		
 		<CustomBehavior File="UserSettings" Preset="UserOriginal" />
-	
-		<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(&quot;item:6948&quot;)" WaitTime="15000" />
-		<TurnIn Nav="Fly" QuestName="Bleeding the Bleeding Hollow" QuestId="38045" TurnInName="Exarch Yrel" TurnInId="90309" />
 	</If>
 
 	<!-- Temple of Sha'naar -->
 	<If Condition="HasQuest(37968)" >
 		<If Condition="!IsQuestCompleted(37968)" >
 			<CustomBehavior File="RunCode" Code="Logging.Write(System.Windows.Media.Colors.DeepSkyBlue, &quot;[Profile]: Moving to Temple of Sha'naar.&quot;);"/>
-			
-			<If Condition="Unit(90960, o =&gt; o.Distance &lt; 100 ) != null">
-				<CustomBehavior File="TaxiRide" MobId="90960" WaitForNpcs="false" DestName="Vault of the Earth, Tanaan Jungle"  WaitTime="1000" />
-				<CustomBehavior File="WaitTimer" WaitTime="1500" />
-				<CustomBehavior File="TaxiRide" MobId="90562" WaitForNpcs="false" DestName="naari Refuge, Tanaan Jungle"  WaitTime="1000" />
-			</If>
 		</If>
 		<CustomBehavior File="UserSettings" KillBetweenHotspots="true" />
 		
@@ -200,19 +166,12 @@
 		</CustomBehavior>
 		
 		<CustomBehavior File="UserSettings" Preset="UserOriginal" />
-		
-		<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(&quot;item:6948&quot;)" WaitTime="15000" />
-		<TurnIn QuestName="Assault on the Temple of Sha'naar" QuestId="37968" TurnInName="Exarch Yrel" TurnInId="90309" />
 	</If>
 	
 	<!-- Ironhold Harbor -->
 	<If Condition="HasQuest(37891)" >
 		<If Condition="!IsQuestCompleted(38440)" >
 			<CustomBehavior File="RunCode" Code="Logging.Write(System.Windows.Media.Colors.DeepSkyBlue, &quot;[Profile]: Moving to Ironhold Harbor.&quot;);"/>
-			
-			<If Condition="Unit(90960, o =&gt; o.Distance &lt; 100 ) != null">
-				<CustomBehavior File="TaxiRide" MobId="90960" WaitForNpcs="false" DestName="s Lookout, Tanaan Jungle"  WaitTime="1000" />
-			</If>
 		</If>
 		<CustomBehavior File="UserSettings" KillBetweenHotspots="true" />
 		
@@ -249,19 +208,12 @@
 		<CustomBehavior File="Hooks\DoWhen" ActivityName="InteractWithObjects" Command="Remove" />
 		
 		<CustomBehavior File="UserSettings" Preset="UserOriginal" />
-		
-		<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(&quot;item:6948&quot;)" WaitTime="15000" />
-		<TurnIn Nav="Fly" QuestName="Assault on Ironhold Harbor" QuestId="37891" TurnInName="Exarch Yrel" TurnInId="90309" />
 	</If>
 	
 	<!-- The Iron Front -->
 	<If Condition="HasQuest(38046)" >
 		<If Condition="!IsQuestCompleted(38046)" >
 			<CustomBehavior File="RunCode" Code="Logging.Write(System.Windows.Media.Colors.DeepSkyBlue, &quot;[Profile]: Moving to The Iron Front.&quot;);"/>
-			
-			<If Condition="Unit(90960, o =&gt; o.Distance &lt; 100 ) != null">
-				<CustomBehavior File="TaxiRide" MobId="90960" WaitForNpcs="false" DestName="The Iron Front, Tanaan Jungle"  WaitTime="1000" />
-			</If>
 		</If>
 		<CustomBehavior File="UserSettings" KillBetweenHotspots="true" />
 		
@@ -303,9 +255,34 @@
 		<CustomBehavior File="Hooks\DoWhen" ActivityName="InteractWithObject" Command="Remove" />
 		
 		<CustomBehavior File="UserSettings" Preset="UserOriginal" />
-		
+	</If>
+	
+	<While Condition="Me.BagItems.FirstOrDefault(h => h.Entry == 6948).Cooldown == 0"> <!-- HS -->
 		<CustomBehavior File="Misc\RunLua" Lua="UseItemByName(&quot;item:6948&quot;)" WaitTime="15000" />
-		<TurnIn QuestName="Battle At The Iron Front" QuestId="38046" TurnInName="Exarch Yrel" TurnInId="90309" />
+	</While>
+	
+	<If Condition="HasQuest(38440) &amp;&amp; IsQuestCompleted(38440)" >
+		<TurnIn Nav="Fly" QuestName="Assault on The Fel Forge" QuestId="38440" TurnInName="Exarch Yrel" TurnInId="90309" X="3820.899" Y="-1364.062" Z="94.91905" />
+	</If>
+	<If Condition="HasQuest(38250) &amp;&amp; IsQuestCompleted(38250)" >
+		<TurnIn Nav="Fly" QuestName="Assault on the Ruins of Kra'nak" QuestId="38250" TurnInName="Exarch Yrel" TurnInId="90309" X="3820.899" Y="-1364.062" Z="94.91905" />
+	</If>
+	<If Condition="HasQuest(38045) &amp;&amp; IsQuestCompleted(38045)" >
+		<TurnIn Nav="Fly" QuestName="Bleeding the Bleeding Hollow" QuestId="38045" TurnInName="Exarch Yrel" TurnInId="90309" X="3820.899" Y="-1364.062" Z="94.91905" />
+	</If>
+	<If Condition="HasQuest(37968) &amp;&amp; IsQuestCompleted(37968)" >
+		<TurnIn Nav="Fly" QuestName="Assault on the Temple of Sha'naar" QuestId="37968" TurnInName="Exarch Yrel" TurnInId="90309" X="3820.899" Y="-1364.062" Z="94.91905" />
+	</If>
+	<If Condition="HasQuest(37891) &amp;&amp; IsQuestCompleted(37891)" >
+		<TurnIn Nav="Fly" QuestName="Assault on Ironhold Harbor" QuestId="37891" TurnInName="Exarch Yrel" TurnInId="90309" X="3820.899" Y="-1364.062" Z="94.91905" />
+	</If>
+	<If Condition="HasQuest(38046) &amp;&amp; IsQuestCompleted(38046)" >
+		<TurnIn Nav="Fly" QuestName="Battle At The Iron Front" QuestId="38046" TurnInName="Exarch Yrel" TurnInId="90309" X="3820.899" Y="-1364.062" Z="94.91905" />
+	</If>
+	
+	<!-- Unseen Influence -->
+	<If Condition="HasQuest(39433) &amp;&amp; IsQuestCompleted(39433)" >
+		<TurnIn Nav="Fly" QuestName="Unseen Influence" QuestId="39433" TurnInName="Dawn-Seeker Krisek" TurnInId="95424" X="3855.705" Y="-1335.908" Z="91.15343" />
 	</If>
 	
 	<CustomBehavior File="LoadProfile" ProfileName="[Q][A]Tanaan Jungle Other Dailies - Opply"  />
