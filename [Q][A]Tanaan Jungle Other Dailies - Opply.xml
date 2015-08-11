@@ -36,12 +36,6 @@
 	<If Condition="!(HasQuest(39581) || HasQuest(39582) || HasQuest(39586) || HasQuest(39433) || HasQuest(39568) || HasQuest(39567) || HasQuest(39569) || HasQuest(39571) || HasQuest(39573) || HasQuest(39570))" >
 		<CustomBehavior File="RunCode" Code="Logging.Write(System.Windows.Media.Colors.DeepSkyBlue, &quot;[Profile]: Moving to Lions Watch to pick up quests.&quot;);"/>
 		
-		<!-- One quest from Parvink -->
-		<CustomBehavior File="InteractWith"  MobId="96147" WaitTime="500" X="3840.701" Y="-1327.689" Z="94.02089" />
-		<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(1)" />
-		<CustomBehavior File="WaitTimer" WaitTime="1500" />
-		<CustomBehavior File="Misc\RunLua" Lua="AcceptQuest()"  />
-		
 		<!-- One quest from Dawn-Seeker Krisek -->
 		<CustomBehavior File="InteractWith"  MobId="95424" WaitTime="500" X="3855.705" Y="-1335.908" Z="91.15343" />
 		<CustomBehavior File="Misc\RunLua" Lua="SelectGossipAvailableQuest(1)" />
@@ -372,13 +366,17 @@
 					<Hotspot X="3945.986" Y="990.3648" Z="159.1595" />
 					<Hotspot X="3942.568" Y="938.5754" Z="157.0977" />
 					<Hotspot X="3939.258" Y="875.6943" Z="152.6843" />
+					<Hotspot X="3961.796" Y="926.2985" Z="152.9039" />
+					<Hotspot X="3906.707" Y="923.7256" Z="153.6452" />
 				</Hotspots>
 				</GrindArea>    
 			</SetGrindArea>
 		<GrindUntil Nav="Fly" Condition="IsQuestCompleted(39573)" />
 		
 		<CustomBehavior File="NoCombatMoveTo" X="4076.012" Y="1181.747" Z="160.929"  />
-		<CustomBehavior File="TaxiRide" MobId="91940" WaitForNpcs="false" DestName="s Watch, Tanaan Jungle"  WaitTime="1000" />
+		<If Condition="!(HasQuest(39433) &amp;&amp; !IsQuestCompleted(39433))" >
+			<CustomBehavior File="TaxiRide" MobId="91940" WaitForNpcs="false" DestName="s Watch, Tanaan Jungle"  WaitTime="1000" />
+		</If>
 		
 	</If>
 	
