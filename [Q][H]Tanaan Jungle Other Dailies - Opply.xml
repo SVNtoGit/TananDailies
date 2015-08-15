@@ -334,6 +334,21 @@
 	<If Condition="HasQuest(39433) &amp;&amp; !IsQuestCompleted(39433)" >
 		<CustomBehavior File="RunCode" Code="Logging.Write(System.Windows.Media.Colors.DeepSkyBlue, &quot;[Profile]: Doing Unseen Influence.&quot;);"/>
 	
+		<!-- If we are doing pressing the attack, do ruins of kranak and Unseen Influence together -->
+		<If Condition="HasQuest(39574) &amp;&amp; !IsQuestCompleted(39574) &amp;&amp; !IsQuestCompleted(38252)" >
+			<CustomBehavior File="RunCode" Code="Logging.Write(System.Windows.Media.Colors.DeepSkyBlue, &quot;[Profile]: Also doing bonus objective for Pressing the Attack.&quot;);"/>
+			<CustomBehavior File="NoCombatMoveTo" X="4544.962" Y="451.8818" Z="229.8152" />
+			<CustomBehavior File="UserSettings" KillBetweenHotspots="true" />
+			<CustomBehavior File="InteractWith" MobIds="90795, 90300, 90706, 90790, 90791, 90796, 90792, 243852" NumOfTimes="100" WaitTime="1500" TerminateWhen="IsQuestCompleted(39447)" >
+				<HuntingGrounds WaypointVisitStrategy="Random" >
+					<Hotspot X="4546.808" Y="486.0171" Z="226.6106" />
+					<Hotspot X="4639.002" Y="608.1016" Z="204.4243" />
+					<Hotspot X="4523.261" Y="653.3411" Z="175.3183" />
+					<Hotspot X="4409.374" Y="820.7141" Z="175.4831" />
+				</HuntingGrounds>
+			</CustomBehavior>
+		</If>
+	
 		<!-- If we got other quests in this area, kill everything -->
 		<If Condition="(HasQuest(39512) &amp;&amp; !IsQuestCompleted(39512)) || (HasQuest(38250) &amp;&amp; !IsQuestCompleted(38250))" >
 			<CustomBehavior File="UserSettings" KillBetweenHotspots="true" />
