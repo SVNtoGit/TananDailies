@@ -464,7 +464,7 @@
 		</If>
 		
 		<!-- Zeth'gol -->
-		<If Condition="!IsQuestCompleted(39574) &amp;&amp; !IsQuestCompleted(38045)" >
+		<If Condition="!IsQuestCompleted(39574) &amp;&amp; !IsQuestCompleted(39441)" >
 			<CustomBehavior File="RunCode" Code="Logging.Write(System.Windows.Media.Colors.DeepSkyBlue, &quot;[Profile]: Moving to Zeth'gol for Pressing the Attack.&quot;);"/>
 			<CustomBehavior File="NoCombatMoveTo" X="3963.603" Y="563.5723" Z="126.7109" />
 			
