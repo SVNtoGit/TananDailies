@@ -457,7 +457,7 @@
 					</Hotspots>
 					</GrindArea>    
 				</SetGrindArea>
-			<GrindUntil Nav="Fly" Condition="IsQuestCompleted(38051)" />
+			<GrindUntil Nav="Fly" Condition="IsQuestCompleted(38866)" />
 			
 			<CustomBehavior File="Hooks\DoWhen" ActivityName="PickUpBandage" Command="Remove" />
 			<CustomBehavior File="Hooks\DoWhen" ActivityName="InteractWithObject" Command="Remove" />
