@@ -38,7 +38,7 @@
 		<CustomBehavior File="RunCode" Code="Logging.Write(System.Windows.Media.Colors.DeepSkyBlue, &quot;[Profile]: Moving to Tanaan Planning Map to pick up quest.&quot;);"/>
 		<CustomBehavior File="NoCombatMoveTo" X="3818.159" Y="-1361.956" Z="95.98877" />
 		
-		<CustomBehavior File="InteractWith" MobId="239902" NonCompeteDistance="0" WaitTime="2000" Range="5" X="3817.707" Y="-1363.149" Z="95.86454" />
+		<CustomBehavior File="InteractWith" MobId="239902" NonCompeteDistance="0" WaitTime="2000" Range="5" X="3817.707" Y="-1363.149" Z="95.86454" PreInteractMountStrategy="Dismount" />
 		<CustomBehavior File="Misc\RunLua" Lua="QuestChoiceFrameOption1.OptionButton:Click()" WaitTime="500" />
 		
 		<If Condition="HasQuest(38250)">
@@ -89,7 +89,7 @@
 		</If>
 		<CustomBehavior File="UserSettings" KillBetweenHotspots="true" />
 
-		<CustomBehavior File="InteractWith" MobIds="90795, 90300, 90706, 90790, 90791, 90796, 90792, 243852" NumOfTimes="100" WaitTime="1500" TerminateWhen="IsQuestCompleted(38250)" >
+		<CustomBehavior File="InteractWith" MobIds="90795, 90300, 90706, 90790, 90791, 90796, 90792, 243852" NumOfTimes="100" WaitTime="1500" TerminateWhen="IsQuestCompleted(38250)" PreInteractMountStrategy="Dismount" >
 			<HuntingGrounds WaypointVisitStrategy="Random" >
 				<Hotspot X="4546.808" Y="486.0171" Z="226.6106" />
 				<Hotspot X="4639.002" Y="608.1016" Z="204.4243" />
@@ -102,7 +102,7 @@
 			<CustomBehavior File="RunCode" Code="Logging.Write(System.Windows.Media.Colors.DeepSkyBlue, &quot;[Profile]: Finnishing up Unseen Influence while we are here.&quot;);"/>
 			<CustomBehavior File="UserSettings" KillBetweenHotspots="false" />
 
-			<CustomBehavior File="InteractWith" MobIds="243852" NumOfTimes="100" WaitTime="1500" TerminateWhen="IsQuestCompleted(39433)" >
+			<CustomBehavior File="InteractWith" MobIds="243852" NumOfTimes="100" WaitTime="1500" TerminateWhen="IsQuestCompleted(39433)" PreInteractMountStrategy="Dismount" >
 				<HuntingGrounds WaypointVisitStrategy="Random" >
 					<Hotspot X="4546.808" Y="486.0171" Z="226.6106" />
 					<Hotspot X="4639.002" Y="608.1016" Z="204.4243" />
@@ -123,7 +123,7 @@
 		</If>	
 		<CustomBehavior File="UserSettings" KillBetweenHotspots="true" />
 		
-		<CustomBehavior File="InteractWith" MobId="90704" NumOfTimes="100" WaitTime="1500" TerminateWhen="IsQuestCompleted(38045)" >
+		<CustomBehavior File="InteractWith" MobId="90704" NumOfTimes="100" WaitTime="1500" TerminateWhen="IsQuestCompleted(38045)" PreInteractMountStrategy="Dismount" >
 			<HuntingGrounds WaypointVisitStrategy="Random" >
 				<Hotspot X="4039.532" Y="552.5905" Z="144.3611" />
 				<Hotspot X="4066.949" Y="510.654" Z="140.3789" />
@@ -155,7 +155,7 @@
 		</If>
 		<CustomBehavior File="UserSettings" KillBetweenHotspots="true" />
 		
-		<CustomBehavior File="InteractWith" MobIds="90501, 90302, 90687, 240165, 90703" NumOfTimes="100" WaitTime="1500" TerminateWhen="IsQuestCompleted(37968)" >
+		<CustomBehavior File="InteractWith" MobIds="90501, 90302, 90687, 240165, 90703" NumOfTimes="100" WaitTime="1500" TerminateWhen="IsQuestCompleted(37968)" PreInteractMountStrategy="Dismount" >
 			<HuntingGrounds WaypointVisitStrategy="Random" >
 				<Hotspot X="3534.753" Y="211.627" Z="139.7309" />
 				<Hotspot X="3508.366" Y="136.7421" Z="149.1467" />
