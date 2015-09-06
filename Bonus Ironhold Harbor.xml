@@ -32,11 +32,11 @@
 </Blackspots>
 
 <QuestOrder>
-	<CustomBehavior File="Hooks\DoWhen" ActivityName="InteractWithObjects" 
+	<!--CustomBehavior File="Hooks\DoWhen" ActivityName="InteractWithObjects" 
 					UseWhen="!Me.Combat &amp;&amp; (Unit(90433, o =&gt; o.Distance &lt; 30) != null || Object(240014, o =&gt; o.Distance &lt; 30) != null) || (Object(239839, o =&gt; o.Distance &lt; 30) != null)" >
 		<CustomBehavior File="InteractWith" WaitForNpcs="false" WaitTime="3000" MobIds="90433, 240014, 239839" NumOfTimes="100" CollectionDistance="35" PreInteractMountStrategy="DismountOrCancelShapeshift" 
 						TerminateWhen="Unit(90433, o =&gt; o.Distance &lt; 45) == null &amp;&amp; Object(240014, o =&gt; o.Distance &lt; 45) == null &amp;&amp; Object(239839, o =&gt; o.Distance &lt; 45) == null" />
-	</CustomBehavior>
+	</CustomBehavior-->
 	
 	<SetGrindArea>
 		<GrindArea>

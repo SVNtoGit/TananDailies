@@ -283,7 +283,7 @@
 		<CustomBehavior File="RunCode" Code="Logging.Write(System.Windows.Media.Colors.DeepSkyBlue, &quot;[Profile]: Doing Disarming Sha'naar.&quot;);"/>
 	
 		<While Condition="!IsQuestCompleted(39571)">
-			<CustomBehavior File="InteractWith" MobId="243794" NonCompeteDistance="0" Range="8" WaitTime="1000" >
+			<CustomBehavior File="InteractWith" MobId="243794" NonCompeteDistance="0" Range="8" WaitTime="1000" PreInteractMountStrategy="Dismount" >
 				<HuntingGrounds WaypointVisitStrategy="Random" >
 					<Hotspot X="3443.779" Y="185.3316" Z="148.9178" />
 					<Hotspot X="3420.356" Y="197.1355" Z="144.1732" />
@@ -340,7 +340,7 @@
 			<CustomBehavior File="RunCode" Code="Logging.Write(System.Windows.Media.Colors.DeepSkyBlue, &quot;[Profile]: Also doing bonus objective for Pressing the Attack.&quot;);"/>
 			<CustomBehavior File="NoCombatMoveTo" X="4544.962" Y="451.8818" Z="229.8152" />
 			<CustomBehavior File="UserSettings" KillBetweenHotspots="true" />
-			<CustomBehavior File="InteractWith" MobIds="90795, 90300, 90706, 90790, 90791, 90796, 90792, 243852" NumOfTimes="100" WaitTime="1500" TerminateWhen="IsQuestCompleted(39447)" >
+			<CustomBehavior File="InteractWith" MobIds="90795, 90300, 90706, 90790, 90791, 90796, 90792, 243852" NumOfTimes="100" WaitTime="1500" TerminateWhen="IsQuestCompleted(39447)" PreInteractMountStrategy="Dismount" >
 				<HuntingGrounds WaypointVisitStrategy="Random" >
 					<Hotspot X="4546.808" Y="486.0171" Z="226.6106" />
 					<Hotspot X="4639.002" Y="608.1016" Z="204.4243" />
@@ -359,7 +359,7 @@
 		</Else>
 		
 		<!-- Do the rest of Unseen Influence if needed -->
-		<CustomBehavior File="InteractWith" MobId="243852" NumOfTimes="100" WaitTime="1500" TerminateWhen="IsQuestCompleted(39433)" >
+		<CustomBehavior File="InteractWith" MobId="243852" NumOfTimes="100" WaitTime="1500" TerminateWhen="IsQuestCompleted(39433)" PreInteractMountStrategy="Dismount" >
 			<HuntingGrounds WaypointVisitStrategy="Random" >
 				<Hotspot X="4546.808" Y="486.0171" Z="226.6106" />
 				<Hotspot X="4639.002" Y="608.1016" Z="204.4243" />
@@ -410,7 +410,7 @@
 			<CustomBehavior File="RunCode" Code="Logging.Write(System.Windows.Media.Colors.DeepSkyBlue, &quot;[Profile]: Moving to Ruins of Kra'nak for Pressing the Attack.&quot;);"/>
 			<CustomBehavior File="NoCombatMoveTo" X="4544.962" Y="451.8818" Z="229.8152" />
 			
-			<CustomBehavior File="InteractWith" MobIds="90795, 90300, 90706, 90790, 90791, 90796, 90792, 243852" NumOfTimes="100" WaitTime="1500" TerminateWhen="IsQuestCompleted(39447)" >
+			<CustomBehavior File="InteractWith" MobIds="90795, 90300, 90706, 90790, 90791, 90796, 90792, 243852" NumOfTimes="100" WaitTime="1500" TerminateWhen="IsQuestCompleted(39447)" PreInteractMountStrategy="Dismount" >
 				<HuntingGrounds WaypointVisitStrategy="Random" >
 					<Hotspot X="4546.808" Y="486.0171" Z="226.6106" />
 					<Hotspot X="4639.002" Y="608.1016" Z="204.4243" />
@@ -425,7 +425,7 @@
 			<CustomBehavior File="RunCode" Code="Logging.Write(System.Windows.Media.Colors.DeepSkyBlue, &quot;[Profile]: Moving to Zeth'gol for Pressing the Attack.&quot;);"/>
 			<CustomBehavior File="NoCombatMoveTo" X="3963.603" Y="563.5723" Z="126.7109" />
 			
-			<CustomBehavior File="InteractWith" MobId="90704" NumOfTimes="100" WaitTime="1500" TerminateWhen="IsQuestCompleted(39441) || IsQuestCompleted(39574)" >
+			<CustomBehavior File="InteractWith" MobId="90704" NumOfTimes="100" WaitTime="1500" TerminateWhen="IsQuestCompleted(39441) || IsQuestCompleted(39574)" PreInteractMountStrategy="Dismount" >
 			<HuntingGrounds WaypointVisitStrategy="Random" >
 				<Hotspot X="4039.532" Y="552.5905" Z="144.3611" />
 				<Hotspot X="4066.949" Y="510.654" Z="140.3789" />
